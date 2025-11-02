@@ -19,7 +19,7 @@
                                               addStudent({
                                                       id: Date.now().toString(),
                                                               name, klass });
-
+                                              }
                                                                                     onClose?.();
                                                                                       }
 
