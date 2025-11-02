@@ -13,15 +13,12 @@
 
                   if (existing) {
                         // pass id and partial update object
-                              updateStudent(existing.id, { name, class: klass });
+                              updateStudent(existing.id, { name, klass });
                                   } else {
                                         // create id for new student and pass full student object
                                               addStudent({
                                                       id: Date.now().toString(),
-                                                              name,
-                                                                      class: klass,
-                                                                            });
-                                                                                }
+                                                              name, klass });
 
                                                                                     onClose?.();
                                                                                       }
