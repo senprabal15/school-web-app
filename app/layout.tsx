@@ -1,4 +1,3 @@
-'use client';
 import Link from 'next/link';
 import { auth } from '@/lib/firebase';
 import { signOut } from 'firebase/auth';
