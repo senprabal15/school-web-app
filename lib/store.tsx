@@ -4,7 +4,7 @@ import React, { createContext, useContext, useState } from "react";
 type Student = {
   id: string;
     name: string;
-      grade: string;
+      class: string;
       };
 
       type User = {
