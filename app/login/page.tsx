@@ -7,6 +7,7 @@ export default function Login() {
   const router = useRouter();
 
   async function handleGoogleLogin() {
+    if (!auth || !googleProvider) return;
     await signInWithPopup(auth, googleProvider);
     document.cookie = 'firebaseAuth=1; path=/';
     router.push('/dashboard');
@@ -14,6 +15,7 @@ export default function Login() {
 
   async function handleEmailLogin(e: any) {
     e.preventDefault();
+    if (!auth) return;
     const email = e.target.email.value;
     const password = e.target.password.value;
     await signInWithEmailAndPassword(auth, email, password);
